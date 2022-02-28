@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Before and after pseudo selector</title>
+
+<style>
+    body{
+        font-family: 'Roboto Condensed', sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0px;
+        padding: opx;
+      }
+      header::before{
+      background: url('billy-onjea-I0hdZKGdQQQ-unsplash.jpg');
+      content: "";
+      width:100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+
+    }
+    .navigation, li{
+        display: flex;
+        margin: 14px;
+        padding: 8px;
+
+    }
+    section{
+       
+        height: 250px;
+        margin: 10px 182px;
+        /* border: 2px solid red; */
+        padding: 2px 25px;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+    /* section::before{
+        content: "this is my website";
+    } */
+</style>
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navigation">
+          <li class="item">Home</li>
+          <li class="item">About us</li>
+          <li class="item">Contact us</li>
+          <li class="item">call us</li>
+        </ul>
+    </nav>
+</header>
+      <section>
+        <h1>Hello word</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga,
+          obcaecati! Pariatur, provident! Quas voluptate numquam possimus earum,
+          molestias nam adipisci voluptates sed debitis nesciunt mollitia quam
+          officia quaerat molestiae, non veritatis quos laudantium tempore porro
+          repudiandae facere deserunt, facilis nisi harum. Quam, blanditiis
+          sequi.
+        </p>
+      </section>
+      
+  </body>
+</html>

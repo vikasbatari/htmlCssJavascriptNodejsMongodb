@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+    <style>
+      .container {
+        height: 450px;
+        width: 100%;
+        border: 2px solid red;
+        margin: 44px 0px;
+        display: flex;
+        /* By default flex direction is row */
+        flex-direction: row;
+
+        /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+
+        /* by default container property is no-wrap */
+        /* flex-wrap: wrap;  */
+
+        /* justify-content: will justify the content in horizontal direction; */
+
+        /*justify-content: center;
+            justify-content: flex-end;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: right; */
+        /* justify-content: stretch; */
+
+        /* align-items:  will align the item in vertical direction; */
+
+        /* align-items: center; */
+        /* align-items: flex-end; */
+        /* align-items: flex-start; */
+        /* align-items: stretch; */
+      }
+      .item {
+        background-color: tomato;
+        width: 180px;
+        height: 150px;
+        border: 2px solid green;
+        margin: 10px;
+        padding: 8px;
+      }
+      #item-1 {
+          /* higher the order later it will show in the container */
+          /* order: 4; */
+
+          /* flex-grow: 2;
+          flex-shrink: 2; */
+      }
+      #item-2 {
+        flex-basis: 250px;
+
+        /* when flex direction is set to row flex-basis : will control width ; */
+        /* when flex direction is set to column flex-basis : will control height ; */
+      }
+      #item-3 {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" id="item-1">This is first Box</div>
+      <div class="item" id="item-2">This is second Box</div>
+      <div class="item" id="item-3">This is third Box</div>
+      <!-- <div class="item" id="item-4">This is fourth Box</div>
+        <div class="item" id="item-5">This is fifth Box</div>
+        <div class="item" id="item-6">This is sixth Box</div> -->
+    </div>
+  </body>
+</html>

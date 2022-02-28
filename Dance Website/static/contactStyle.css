@@ -1,0 +1,38 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.formClass{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;    
+}
+.myInput{
+         
+     margin: 12px auto;
+     padding: 12px 15px;
+     border: 2px solid rgb(155, 107, 107);
+     border-radius: 10px; 
+     width:40%;  
+
+}
+
+.btn{
+    padding: 6px 43px;
+    margin: 10px 6px;
+    background-color: #30302c;
+    border: 2px solid #a57676;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(226, 128, 169);
+}
+
+h2{
+    text-align: center;
+    margin: 12px;
+}

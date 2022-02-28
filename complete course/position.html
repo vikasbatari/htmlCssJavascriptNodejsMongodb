@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Positioning</title>
+</head>
+<style>
+    .container{
+        height: 3000px;
+    }
+    .box{
+        border: 2px solid red;
+        width:185px;
+        height: 185px;
+        margin: 3px 4px;
+        display: inline-block;
+        
+    }
+    #box3{
+
+        /* relative: Positions the element relative to its normal positon and will leave a gap at its normal position*/
+        /* position: relative;
+        left:25px;
+        top: 25px; */
+
+        /* absolute: Positions the element relative to the positon of its first parent*/
+        /* position :absolute;
+        left: 25px;
+        top: 35px; */
+
+
+        /* fixed: Positions the element relative to the browser window; 
+        position: fixed;
+        right: 2px;
+        bottom: 2px; */
+
+        /* sticky: Positions the element relative to the users scroll position */
+        position: sticky;
+        top: 3px;
+
+
+
+    }
+</style>
+<body>
+    <div class="container">
+
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    
+</body>
+</html>

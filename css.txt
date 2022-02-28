@@ -1,0 +1,869 @@
+CSS
+
+Cascading style sheet
+
+ # css syntax
+
+ p {color: red}
+
+in the above code
+-> p is a selector which indicates where we have to apply
+-> color here is property which tells what to apply
+-> red is a value
+
+# Group of selector
+
+ header, p.intro{
+background-color:red;
+border-radius:2px;
+}
+
+here header, p.intro is a group selector and
+{
+background-color:red;
+border-radius:2px;
+}
+is a declartion block
+
+# Three ways to add css to the html
+
+1) inline css: css is added to the elements directly using style attribut
+2) internal css: css is kept inside the head tags in <style> tags
+3)External css: css is kept seprately inside a .css style sheet
+
+# rule of precidence in css
+1) css written later will display in the html
+2) if we have to apply the earlier css than later than we have to write the !important after the css property . !important overruled all the css
+3) inline css take the high precidence
+4) in between internal and external css, the css written later later take the high precidence
+
+# Selectors in css
+1) CSS selectors are used to find the element whose propery will be set
+2) Selectors are use to target the html elements
+3)Selectors makes it easy for us to easily target single/multiple HTML elements in markup
+
+# Types of basic css selectors
+
+1) css element selector
+2) css id selector :-
+ css id selector is used with id of the element. syntax
+supposese id of element is redElement
+<style>
+#redElement{
+color:red;
+}
+</style>
+3) css class selector
+class selector is used with .classname
+<p class="bgBlue"></p>
+
+.bgBlue{
+background-color:green;
+}
+the background of the paragraph will get green
+
+4) The css grouping selector :- 
+footer,span{
+background-color:blue}
+
+# three types of color properties
+1) color by name
+2)color by rgb
+3)color by hexa code
+
+# Height,Width,Borders and Backgrounds 
+
+ #firstPara{
+            background-color: red;
+            height: 100px;
+            width:455px;
+            border: 4px solid green;
+            /* border-width: 4px;
+            border-color: green;
+            border-style: solid;  */
+            border-radius: 11px;
+        }
+Now if the condition arises that you want to give a border only at one end, then what will you do. Let us understand with an example -
+#secondPara{
+            background-color: rgb(58, 243, 98);
+            height: 100px;
+            width:455px; 
+            border-top: 2px solid rgb(231, 22, 231);
+            border-right: 2px solid rgb(18, 10, 133);
+            border-bottom: 2px solid rgba(9, 144, 27, 0.774);
+            border-left: 2px solid rgb(156, 42, 13);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 14px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 24px;
+        }
+
+--------------------------------------------------
+
+# Now what if, if you want to add a background image behind the text that you have written. Let us understand this with the code 
+
+ #thirdPara{
+            height: 500px;
+            width:455px; 
+            background-image: url('https://codewithharry.com/static/common/img/photo.png');
+            border: 2px solid red;
+            background-repeat: no-repeat; /* repeat-x and repeat-y will make it repeat on x and y axis */
+            /* background-position: 192px 34px; */
+            background-position: center center;
+            /* background-position: bottom right; */
+            /* background-position: top center; */ 
+          }
+
+
+# CSS Box Model, Margin and Padding 
+
+The box model is a very important topic of CSS and if not understood properly, it can create a lot of confusion in the future. It is the basic framework of web development whether you are making a website using any other language such as Angular or React. The box model helps us to define the padding, border, and margin around an element.
+The element is in the center surrounded by padding, border and margin.
+
+These parts can be explained as-
+
+Content- The content of the box, where text and images appear.
+
+Padding- It clears an area around the content. The padding is transparent.
+
+Border- A border is one that covers the padding and content.
+
+Margin- It clears an area outside the border. The margin is also transparent.
+
+Css
+
+.container{
+            background-color: rgb(231, 230, 241);
+            border: 3px solid rgb(64, 6, 119);
+
+            /* We can set margin/padding for  top, bottom, left and right like this */
+            /* padding-top: 79px;
+            padding-bottom: 79px;
+            padding-left: 34px; 
+            padding-right: 79px;*/
+
+            /* margin-top: 3px;
+            margin-bottom: 5px;
+            margin-left: 34px;
+            margin-right:5px ; */
+
+            /* margin = top right bottom left;  */
+            /* padding = top right bottom left;  */
+
+            /* padding: 23px 56px 6px 78px;   */
+            /* margin: 23px 56px 6px 78px;   */
+        
+            /* padding: y(top/bottom) x(left/right); */
+            /* margin: y(top/bottom) x(left/right); */
+            padding: 34px 19px;
+            margin: 14px 19px;
+            border-radius: 23px;
+            width: 533px
+        }
+
+
+Let us now understand a property called ‘Box sizing’. On giving width to the element and after that applying padding in the container, the width also changes. It is because in the actual width of an element, margin is already been added into it. If you want this not to happen then you can use the property of ‘box-sizing’.
+
+box-sizing: border-box;
+---------------------------------------------------
+
+#Alignment
+
+The CSS float property specifies how an element should float. The CSS clear property specifies what elements can float beside the cleared element and on which side. The float property is used for positioning and formatting content, for example, let an image float left to the text in a container. The float property can have one of one of the following values-
+
+Left- The elements floats to the left of its container.
+Right- The elements floats to the right of its container.
+None- The element does not float (it will be displayed just where it occurs in the text). This is default.
+Inherit- The element inherits the float value of its parent.
+
+---------------------------------------------------------
+# Styling Links & Buttons
+
+we are going to see how to style and design buttons in CSS and what pseudo-selectors are
+
+.btn{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: crimson;
+            padding:6px;
+            border: none;
+            cursor:pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+Let us now see what Pseudo Selectors are. A pseudo class is used to define a special state of an element.
+
+Hover is used to change the color of text or background of a button as soon as you hover that part. The code for this is as below.
+
+a:hover{
+            color: rgb(5, 0, 0);
+            background-color: rgb(221, 166, 38);
+        }
+
+Similarly we can put pseudo selector in the ‘btn’ class as well. To apply it write the code as follows-
+
+
+.btn:hover{
+            color:darkgoldenrod;
+            background-color:rgb(223, 245, 201);
+            border: 2px solid black;
+        }
+
+----------------------------------------------------------
+#CSS Display Property
+
+The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.
+
+Let us style the image and heading with some CSS-
+
+  img {
+            margin: auto;
+            display: block;
+            width: 34px;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+        }
+
+By inspecting both the elements in the Chrome browser, we see that the image is an inline element and the h3 heading is the block element. Our objective is to bring all the elements to the center of the webpage. We can achieve it by adjusting the width of the block element i.e. the heading. The respective code of the following is-
+
+ header {
+            border: 2px solid red;
+            margin: auto;
+    width: 1200px;
+        }
+
+The display of “img” is inline and therefore, to make it come to center, we have to set the property display as block as follows-
+
+img {
+            margin: auto;
+            display: block;
+            width: 34px;
+        }
+
+The next problem which arises is that when we stretch the full width of the page, the text in the heading moves towards left. So to move it towards the center, we can set the property of text-alignment as center.
+Display inline means it will take the space according to the size of the element. Display block means we can set its width and by margin manually.
+
+Now suppose we want to make an element inline as well as customize its width too, then in that case we can use inline-block. To understand it, first we will add three divs with some texts in it and then style it. To appear those as a box, we can take the help of container and box class. We can style the box element as
+
+.box {
+            border: 4px solid black;
+            background-color: grey;
+            margin: 4px 0px;
+            padding: 23px;
+            width: 33%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+The inline-block property here allows us to change the width of inline elements also. To ensure that all the three blocks come in a single line, we can use the property box-sizing. It ensure that the width we provide is not changed including padding and margin.
+
+---------------------------------------------------------------------
+
+#Position absolute, relative, fixed and sticky in CSS
+
+
+Types Of Position Property :
+There are five types of position property :
+
+static
+
+relative
+
+absolute
+
+fixed
+
+sticky
+
+position: static;
+It is the default position of HTML elements.
+position: relative;
+It is used when we need to position an HTML element relative to its normal position.
+We can set the top, right, bottom, and left properties that will cause the element to adjust away from the normal position.
+
+
+position: absolute;
+An element with the absolute position will move according to the position of its parent element.
+In the absence of any parent element, the HTML element will be placed relative to the page.
+
+position: fixed;
+An element with position:fixed; will remain stuck to a specific position even after the page is scrolled.
+This position property is used when we want to keep an HTML element at a fixed spot no matter where on the page the user is.
+
+
+position: sticky;
+It is a hybrid of relative and fixed position.
+An HTML element with position:sticky; will just sit there until a given position offset is met.
+
+-----------------------------------------------------------------------------------
+
+#CSS Flexbox
+
+The Flexbox Module was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface with powerful alignment capabilities.
+
+
+<style>
+        .container{
+            height: 544px; 
+            width: 100%;
+            border: 2px solid black;
+            display: flex; /* Initialize the container as a flex box */
+            
+            /* Flex properties for a flex container */
+
+            /* flex-direction: row; (Default value of flex-direction is row) */
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            
+
+            /* flex-wrap: wrap; (Default value of flex-direction is no-wrap) */
+            /* flex-wrap: wrap-reverse; */
+
+            /* This is a shorthand for flex-direction: and flex-wrap: ;; */
+            /* flex-flow: row-reverse wrap; */ 
+
+            /* justify-content will justify the content in horizontal direction */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+
+            /* justify-content will justify the content in vertical direction */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* align-items: stretch; */ 
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item-1{
+            /* Flex properties for a flex item */
+            /* Higher the order, later it shows up in the container */
+            /* order: 2; */
+
+            /* flex-grow: 2;
+            flex-shrink: 2; */
+
+        }
+        #item-2{
+            /* flex-grow: 3;
+            flex-shrink: 3 ; */
+            flex-basis: 160px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+        #item-3{
+            /* flex: 2 2 230px; */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+
+            }
+
+    </style>
+
+
+<div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+    </div>
+
+-----------------------------------------------
+
+#Visibility & z-index
+
+
+Visibility property is used to hide or show an HTML element without changing the layout of the page.
+The hidden element uses the space on the page because it is still there, but it is not visible to the user.
+
+#Difference Between display:none; and visibility:hidden;
+
+display:none; - It completely removes an HTML tag from the web page like it was never there.
+visibility:hidden;  - It makes the tag invisible but will not remove the element, and it will still occupy the space on the page.
+
+Z-Index Property In CSS :
+At the starting of this tutorial, we created four boxes of different colours. Now, try to answer this question: What if one box overlaps the other? Which box will be visible to the user? This is where z-index property comes into the picture. So, whenever HTML elements collapse with each other, then the element with smaller z-index value will be covered by the element with larger z-index value.
+
+Note: Z-index does not work on static position value. It only works on the elements with position: relative, absolute, fixed, or sticky.  We are changing the positions of box1 and box2 by applying the CSS given below: 
+
+-------------------------------------------------------------------------------------
+
+# em, rem, vh and vw units + Responsive design
+
+What Is Responsive Design?
+Have you ever noticed that websites nowadays adjust themselves according to the resolution of your device(Smartphone, tablet, or desktop computer)? Isn't it amazing that a website is automatically changing its height and width according to the size of the user's screen? This is possible because of the responsive design. Let's dive deep into responsive design.
+
+Responsive design is a way for a web developer to make a website adapt to all the devices and resolutions.
+
+Endless new resolutions and devices are challenging to support separately for a web developer; therefore, responsive design is the best approach to develop a website that can adjust itself according to the screen size.
+
+Responsive design is a necessity and not a luxury anymore!
+
+Various Ways To Achieve Responsive Design :
+
+1)By using rem/vh/vw units over pixels.
+
+2)By using max-width/max-height.
+
+3)Using CSS Media Queries.
+
+4)Setting up the viewport.
+
+
+em- 
+Font-sizes are inherited relative to the parent element.
+10em means ten times of the parent element.
+
+ <style>
+        h1{
+            text-align: center;
+            font-size: 10px;
+        } 
+        .container{
+            font-size: 10px;
+        }
+        #first{
+            font-size: 10em;
+        }
+</style>
+
+In the above , you can see that the font-size of the first heading is changed. Earlier the font-size was 10px because <h1> inherited this size from its parent element, i.e., container. Now, the font-size of <h1> has changed to 100px because 10 em means ten times of the parent element so 10*10=100px.
+
+
+
+rem-
+Font-size gets set according to the font-size of the root element.
+
+In general, <html> is the root element.
+
+In rem, "r" stands for "root."
+
+
+<style>
+        html{
+            font-size: 7px;
+        }
+        h1{
+            text-align: center;
+            font-size: 10px;
+        } 
+        .container{
+            font-size: 10px;
+        }
+        #first{
+            font-size: 10em;
+        }
+        #second{
+            font-size: 10rem;
+        }
+    </style>
+
+In the above code, we have given the font-size of 7px to the <html>. Then, we have applied the font-size of 10rem to the second heading. Here is the output :
+
+second heading has changed from 7px to 70px because 10rem is equal to 10 times the root element. You can verify the font-size with the help inspect element functionality of the chrome browser.
+
+
+vh- 
+It stands for viewport height.
+
+vh is equal to the 1/100 times of the viewport height.
+
+Example: Suppose height of the browser is 1000px, so 1vh is equaled to (1/100)*1000= 10px.
+
+
+vw-
+It stands for viewport width.
+
+Similar to vh, vw is equal to the 1/100 times of the viewport width.
+
+Example: Suppose width of the browser is 1000px, so 1vw is equaled to (1/100)*1000= 10px.
+
+-------------------------------------------------------------------------------------------------
+
+#Media Queries Explained
+
+What Is Media Query?
+Media queries are used when we want to customize our website's presentation according to the user's screen size. With the help of media queries, you can display different markups based upon the device's general type(mobile, desktop, tablet).
+A media query is a logical operation. Whenever a media query becomes true, then the related CSS is applied to the target element.
+Syntax Of Media Query :
+A media query is composed of two things: media type and expression. A media query can contain one or more expressions. 
+
+Syntax :
+
+@media media-type and (media-feature)
+{
+/* CSS Rules to be applies*/
+}
+
+Example: 
+
+@media screen and (max-width: 800px)
+{
+#contents{width:90%}
+}
+
+Let's understand this example :
+
+@media: A media query always starts with @media.
+Screen: It is the applicable media type.
+max-width: It is the media feature. 
+#contents{width:90%} : It is the CSS to be applied when the conditions are met.
+
+
+@media (min-width: 450px) and (max-width: 600px){
+            #box2{
+                display: block;
+                background-color: teal; 
+            }
+        }
+
+
+------------------------------------------------------------------------------------
+
+#More on CSS Selectors
+
+div p{
+            color: rgb(0, 0, 128);
+            background-color:orange;
+            font-weight: bold;
+        }
+
+<body>
+    <h1> This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <p> This is a paragraph</p>
+        </div>
+        <p> This is another paragraph</p>
+    </div>
+    <p> This is the third paragraph</p>
+</body>
+
+we can see that the CSS is applied to the two paragraphs, but it is not applied to the third paragraph. Why? Let me answer this simple question for you. The CSS is not applied to the third paragraph because we have applied CSS only on the <p> tags inside div, and the third paragraph is not inside a div element.
+
+<style>
+div > p{
+            background-color: lightblue;
+            color:white;
+        }
+</style>
+
+<body>
+    <h1> This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is a paragraph inside li and this is not a direct child of div. It will not get affected.</p>
+                </li>
+            </ul>
+            <p> This is the second paragraph and it will get affected because it is the direct child of div.</p>
+        </div>
+        <p> This is the third pargraph and it will get affected because it is also a direct child</p>
+    </div>
+    <p> This is the outer most paragraph and it will not get affected. </p>
+</body>
+
+
+we can see that the CSS is applied to the second and third paragraphs because they are the direct child of div. Paragraph inside <li> is the direct child of <li> and not of <div>. Also, in the case of the outermost paragraph, the parent element is the body and not div; therefore, no styling is applied to it. Now, we will talk about one more type of CSS selectors, i.e., div+p
+
+
+div+p :
+There might be situations where you want to select the <p> tags that are immediately after the <div> elements. In such cases, we use the div+p selectors. Let's understand this with the help of example given below:
+
+you can see that the CSS is applied only to the third and outermost paragraphs because they are next to the <div> element
+
+-------------------------------------------------------------------------------------
+
+#Attribute & nth child pseudo Selectors 
+
+
+To select the input of type text only, we will write the following code-
+
+input[type='text'] {
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+
+With the help of pseudo selectors, we can target different properties by their attributes. In the same way, if we want to target our email tab, then we can write the code as follows and can apply some property to it-
+
+input[type='email'] {
+            color: yellow;
+            border: 4px solid black;
+        }
+
+
+We will notice the black border with several other properties applied to it. In the same way, we can target more properties or tags. 
+
+Now let us see how to use nth child pseudo selectors. Suppose, if we write-
+
+li:nth-child(3){
+      color: cyan;
+}
+The above code will convert the text color to the cyan of the third only. What if we want to change the text color to red of every third element of the list. In that case, we can write-
+
+li:nth-child(3n+3) {
+            color: red;
+        }
+This will convert the text color to red of every third element in the fist.
+
+It works on the basic formula where it will convert all the items depending on the values of n starting from 0. In the same way, we can select all the even items on the list and can apply some CSS to it.
+
+li:nth-child(even) {
+            background-color: yellow;
+        }
+
+-------------------------------------------------------------------------------------
+
+#variables in css
+
+Now we will understand the concept of variables. Suppose, we want to create a variable for the background color. We can create it by ‘--’ symbol. Variables in CSS helps us to assign the same properties to different elements. Let us analyze it with the code given below-
+
+.box{
+            --box-color: violet;
+            width:200px;
+            height: 200px;
+            background-color: var(--box-color);
+            border: 2px solid var(--box-color);
+            box-shadow: 3px 3px var(--box-color);
+            margin: 2px 9px;
+        }
+
+
+The important point to remember about these variables is it can be used within its scope only. To make it work, we can write it again or can use the --root property. To make it understand clearer, we can make a global variable in terms of programming language. Let us understand the code below-
+
+:root{
+            --primary-color: blue;
+            --danger-color: red;
+            --maxw: 333px;
+        }
+
+Any custom properties written in the root variable can be accessed anywhere in the code. In most of the cases, we use primary color and danger color as shown in the above example. We have to modify the violet color with the primary color and danger color in the box class as follows-
+
+--------------------------------------------------------------------------------------------
+
+# Animations & Keyframes
+
+The position of the box is set to be relative so that we can move it within our webpage.
+
+For making our animation, we need to start by giving the animation-name. We can give any name here. It is just used to define our animation.
+
+.box {
+        background-color: green;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        /* animation-name: harry1; */
+        animation-name: harry2;
+        animation-duration: 8s;
+        animation-iteration-count: 1;
+}
+In the above example, we are using the animation-name as harry1. The next property used is animation-duration. It is used to decide how long our animation will run. The last property is animation-iteration-count. It is used to decide the number of times the animation will run.
+
+Now we will define the animation we made, i.e. harry1 as follows-
+
+@keyframes harry1 {
+        from {
+            width: 200px;
+        }
+
+        to {
+            width: 1400px;
+        }
+    }
+
+The keyframes are used to make the animation. From and to are used to decide how the animation will move in the webpage. In the above example, we are moving the animation harry 1 from 200px to 1400px. These types of animations are used to design scroll bars or progress bars on the webpage.
+
+There are some other properties also to customize the animations like-
+
+animation-fill-mode:
+If we want to keep the last property applied to the animation then we can set the animation-fill-property as forward as follows-
+
+animation-fill-mode: forward;
+animation-timing-function:
+We can define this property with three different values-
+
+ease-in
+After applying this, the animation will start slowly and becomes fast towards the end.
+
+ease-out
+After applying this, the animation will begin fastly and become slow towards the end.
+
+ease-in-out
+After applying this, the animation will start slowly, then become fast in the midway, and ends slowly.
+
+
+animation-delay
+It is used to define the time after which the animation will start.
+
+animation-delay: 3s;
+animation-direction:
+This property is used to define the direction of the animation. For example, if we select it as reverse, it will move the animation in reverse direction.
+
+animation-direction: reverse;
+There is another method of creating animation apart from keyframes. For this, we will give the name as harry2.
+
+  @keyframes harry2 {
+        0%{
+            top:0px;
+            left:0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        75%{
+            top: 250px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 250px;
+        }
+        
+    }
+
+
+-----------------------------------------------------------------------------------------------------
+# Transitions in css
+
+Transition-property- It is used to decide which transition property we want to use. For example, if we want to transition background color, then we have to write-
+transition-property: background-color;
+Transition-duration- If we want to see the duration which is required to make the change, we can use this property. For example, if we set transition duration as 1seconds, then the transition will happen in 1 second only.
+transition-duration: 1s;
+
+Transition-timing-function- This property is used to decide the speed of transition from beginning to end. These are of three types as follows-
+ease-in
+After applying this, the animation will start slowly and becomes fast towards the end.
+
+ease-out
+After applying this, the animation will begin fastly and become slow towards the end.
+
+ease-in-out
+After applying this, the animation will start slowly, then become fast in the midway, and ends slowly.
+
+transition-timing-function: ease-in-out;
+Transition-delay- It is that particular time interval after which the transition effect will start. For example, if we set it as 2s, then the transition effect will start after 2 seconds only.
+transition-delay: 2s;
+Also, there is one short hand property that allows us to write all these transitions in a single line. It can be written as follows-
+
+transition: background-color 1s ease-in-out 2s;
+If we want all the properties should go under transition, then we can write-
+
+transition: all 1s ease-in-out 2s;
+Now, we can add some more properties in the hover effect as follows-
+
+#box:hover{
+        background-color: green;
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+    }
+
+Here, all the properties will get changed accordingly and you witness some good transitions. All those properties that can change their values like colors, can show different transition properties. You can try different such properties and view the effects of these transitions. 
+
+
+-------------------------------------------------------------------------------------------------------------
+
+#Transform property in CSS
+
+the transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew., elements. This property is also used in creating animations.
+
+We will start by making a new file as tut38.html and create an instant boilerplate through emmet abbreviation to get the basic HTML template. Give the title as CSS Transform in the <title> tag. Then we will write our HTML code to get started as follows-
+
+<body>
+    <div class="container">
+        <div class="box">This is a box</div>
+    </div>
+</body>
+
+
+Let us now design our box with some CSS as shown below-
+
+.box{
+            background: brown;
+            border: 2px solid black;
+            border-radius: 8px;
+            height: 400px;
+            width: 400px;
+}
+We will also customize our container with the following code as shown below-
+
+.container{
+            height: 80vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+The box will come to the center. We can reset the margin and paddings already applied as follows-
+
+*{
+            margin: 0px;
+            padding: 0px;
+        }
+We are doing this because you must know what all obstacles occur while creating a website and how to tackle them.
+
+Now we can play with the box and apply different transform properties to it. However, we can add more properties to the box to make it look better.
+
+.box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+We can add transform property directly to the box itself. For example, if we write 
+
+transform: rotate(45deg);
+
+We have to apply the transition effect in the box so that it looks like a complete transition effect. For that, we have to add the below code in the box element.-
+
+transition: all 0.5s ease-in-out;
+Now, we can ad the hover effect to add the various transition effects-
+
+If we want to rotate the box, we can write-
+.box:hover{
+            transform: rotate(360deg);
+}
+It will completely rotate the box to 360 degrees.
+
+
+We can also skew the box through certain degrees. The skew property is used sometimes when we want to put the content on one side or we want to show the 3D effect. The code is as follows-
+.box:hover{
+            transform: skew(40deg);
+}
+We can also scale the box. The box will become large depending on the values we provide.
+.box:hover{
+              transform: scale(2);
+}
+In the above example, the box will grow 2 times the initial size.
+
+We can also translate or move the box in the x or y axis respectively by providing some values. The code for them is as follows-
+.box:hover{
+            transform: translateX(123px);
+            transform: translateY(123px);
+}
+We can also write them in the same line as follows-
+
+transform: translate(123px, 123px);
+
+
+

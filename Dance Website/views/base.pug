@@ -1,0 +1,27 @@
+//- layout.pug
+html
+  head
+    title City dance academy
+    block style
+      style
+        include ../static/style.css
+    block scripts
+      script
+        include ../static/index.js
+  body
+    nav#navbar 
+        ul 
+            div#logo
+                img(src="/static/img/logo2.png")
+                | CDA
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            li #[a(href="/") Contact]
+            li #[a(href="/") Services]
+            li #[a(href="/") Class info]
+    
+    block content
+    block foot        
+      footer#footerSection 
+        | Copyright © 2022 citydanceacademy.com | All rights reserved
+        

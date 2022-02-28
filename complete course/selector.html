@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of selector in css</title>
+    <style>
+        /* element selector */
+        p{
+           border: 2px solid;
+        }
+/* id selector */
+        #seconPara{
+            color: red;
+            background-color: antiquewhite;
+        }
+        /* class selector */
+        .textColor{
+            color: brown;
+        }
+
+        .bgColor{
+            background-color: chocolate;
+        }
+ /* groping selector */
+
+        footer,span{
+            background-color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <p>this is a first paragraph</p>
+    <p id="seconPara">this is a second paragraph</p>
+    <p>this is a third paragraph</p>
+    <p class="textColor bgColor">this is a forth paragraph</p>
+    <p class="bgColor">this is a fo <span>This is span</span> paragraph</p>
+
+    <footer>This is a footer</footer>
+    
+</body>
+</html>

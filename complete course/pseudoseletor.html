@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child pseudo selector</title>
+    <style>
+        .container{
+            display: block;
+            width:250px;
+            margin:auto
+        }
+        input{
+            display: block;
+        }
+
+        input[type='text']{
+            border: 2px solid red;
+            margin: 10px;
+        }
+        a[target]{
+            font-size: 35px;
+            background-color: tomato;
+        }
+        /* li:nth-child(2n+0){
+            color:red;
+        } */
+
+        /* li:nth-child(odd){
+            color: red;
+        } */
+
+        li:nth-child(even){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form-control">
+            <a href="http://google.com" target="_blank">Go to google</a>
+            <input type="text" placeholder="ente your name">
+            <input type="password" placeholder="enter password">
+            <button type="submit">submit</button>
+
+        </form>
+
+        <ul>
+        <li class="item" id="item-1">Item 1</li>
+        <li class="item" id="item-2">ITem 2</li>
+        <li class="item" id="item-3">Item 3</li>
+        <li class="item" id="item-4">Item 4</li>
+        <li class="item" id="item-5">Item 5</li>
+        <li class="item" id="item-6">Item 6</li>
+    </ul>
+    </div>
+</body>
+</html>

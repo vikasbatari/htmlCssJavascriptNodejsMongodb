@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click events</title>
+    <style>
+      #btn {
+          padding: 10px 15px;
+          font-size: 14px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          background-color: red;
+          color: white;
+          border: 2px solid black;
+          border-radius: 12px;
+          cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Event handling in javascript</h1>
+      <p id="para">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+        corporis dolorum odio in quis, magni voluptatum nostrum sit repellat
+        architecto fugiat similique eius voluptates. Enim, earum. Necessitatibus
+        error quia expedita, aliquid enim ut, esse quibusdam natus sequi quidem
+        odio sunt. Iste nesciunt omnis, adipisci quisquam officia esse voluptas
+        est sequi. Dolor ipsa dolorum atque iure architecto eos vero ullam
+        accusamus perferendis ab voluptates veniam harum, delectus nobis fuga
+        distinctio quaerat. Laboriosam itaque nam quidem perferendis deleniti ab
+        dolores voluptatem, eos soluta incidunt ad porro reiciendis quia eum,
+        quam debitis consequatur? Ut assumenda doloremque asperiores voluptas
+        nemo corrupti temporibus tempore vel, officia excepturi ipsa, odio
+        ratione. Corporis tempora, numquam itaque odit veniam ab voluptate
+        alias! Dolore optio dolorem itaque, ex repellendus dignissimos
+        laudantium quam aliquam accusamus. Aut quibusdam amet animi aliquid
+        veniam numquam ut, aperiam nam eum reprehenderit harum autem accusantium
+        explicabo. Odio maxime ipsum reiciendis error expedita temporibus non
+        nihil, culpa possimus cupiditate consequatur eveniet ullam iure tempore
+        corporis sunt sit, nam fugit quidem dolore distinctio eaque! Inventore
+        est eligendi nobis cupiditate labore ipsa consequuntur dignissimos modi
+        temporibus, laboriosam corporis quos nisi ipsam sequi dicta architecto
+        numquam doloremque facere quasi iusto voluptatem at dolorum atque.
+        Dolores dolor, culpa eum itaque vero earum dignissimos ex nesciunt
+        debitis corrupti asperiores voluptatibus, maiores recusandae, eos
+        mollitia illo atque facilis quaerat quia animi! Aspernatur id incidunt
+        quasi corrupti enim nam iure illum voluptatum, qui, itaque nobis. Et
+        asperiores enim ipsa accusantium nulla quasi quis facilis hic nemo ad
+        consectetur, fuga velit? Quos.
+      </p>
+
+      <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    </div>
+    <script>
+
+       let para= document.getElementById('para');
+
+       para.addEventListener('mouseover', function run(){
+          para.style.backgroundColor='red'
+       })
+       para.addEventListener('mouseout', function run(){
+          para.style.backgroundColor='white'
+       })
+
+
+        function toggleHide()
+        {
+            let btn= document.getElementById('btn');
+
+            if(para.style.display=='none')
+            {
+                para.style.display= 'block'
+            }else{
+                para.style.display= 'none'
+            }
+        }
+    </script>
+  </body>
+</html>

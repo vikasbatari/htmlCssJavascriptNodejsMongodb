@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>hello word     </div>
+    
+</body>
+</html>
+
+#Above code explantation
+
+<!DOCTYPE html>
+IT tells the browser that this document is html type
+
+<head>
+head consist the meta tags
+Metadata is "data that provides information about other data"
+2) it consist the title
+3)it consist the cdna
+<head>
+<body>
+Body consist the all content of we site
+<body>
+
+# control + forward slash is used to make comment in visual code
+# meta tag is used for search engine otimization
+# html is collection of tags and tags consists attributes
+
+# Elements in Html
+1)Inline element comes in one line like <span>
+1)Block element take its own full space like <p>
+
+# create multiple tag using emmet
+ span.class1.class2.class3*4
+
+# Html Entities
+
+it is used to write the special symol which is not present in the keyboard
+
+# semantics eliments are like <header>,<footer>,<section> etc. it is good for seo. these eliments explain their work in the website
+

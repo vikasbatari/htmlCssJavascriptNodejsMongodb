@@ -1,0 +1,175 @@
+What is Node.Js?
+
+Node.Js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.
+Node.Js is designed to build scalable network applications.
+Node.Js can be download from the official Node.js website.
+Node.Js is a free and open-source server environment.
+Node.Js allows us to run JavaScript on the server.
+Node.Js can run on multiple operating systems.
+
+
+Why use Node.Js?
+
+You can use JavaScript in the entire stack.
+Many famous companies use Node.Js as their backend.
+Node.Js comes with a lot of useful built-in modules.
+Node.Js is fast.
+
+
+This is the Node.Js terminal and we can write the same JavaScript here that we were writing before. Before writing an ideal JavaScript code for Node.Js,
+
+
+To run the server with the help of Node.Js, we can simply write the code as follows-
+
+
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+
+If we execute the above code, we get the output as follows-
+
+
+By clicking it, we see the output as Hello World. It means that we have our own server with the help of Node.js. In the same way, we can pass any HTML code in place of “Hello world”. By doing so, we can make that page live by staring at our own server. 
+
+So I hope, you must have understood what is node and how to install it. In this tutorial, we have also made our own server. In the upcoming videos, we will see some more tools like express. 
+
+
+
+----------------------------------------------------------------------------------------------------
+
+#Blocking vs Non-Blocking execution
+
+The code which runs via line by line execution is known as synchronous or blocking code. It means the line of code written first, will be executed first. On the other hand, a block of code where line by line execution is not guaranteed is known as asynchronous or non-blocking code. These types of codes accept a call-back function.
+
+
+const fs = require("fs");
+fs.readFile("dele.txt", "utf-8", (err, data)=>{
+    console.log(err, data);
+});
+console.log("This is a message");
+
+
+The reason for this is, it is an asynchronous function. It allows the readFile() function to read the file completely. By the time the code is reading the file, the next block of code is executed. And when the reading is completed, it then prints the data. 
+
+It does not mean that the code is not executed line by line. The code is executed synchronously but the output we get depends upon the time taken while reading the file. An asynchronous function is used here because it does not allow the code to block the user. If we use the asynchronous function here, then the file will be first read and then the next line will be executed. 
+
+
+---------------------------------------------------------------------------------------------------
+
+#The Node Package Manager
+
+
+NPM is basically a package manager for Node.Js packages or modules. The NPM program is installed on your computer when you install Node.Js.
+
+To know the version of NPM and Node, we can write npm --version and node --version respectively on the terminal. We get the output as follows-
+
+
+NPM helps us to manage the packages in NodeJs. To understand this, we will make a new directory as tut69. Till now, we have only one file inside this directory i.e., tut69.js. But as soon as we write npm init on the terminal, it asks several questions like the package name, version, description, entry point, keyword, author, etc. When we execute this, there is a new file called package.json inside the tut69 directory.
+
+NPM init has initialized this folder in terms of a node package. Now when we install any other dependency, it automatically gets added to this package. For example, if we write npm install slugify, the package.json file will automatically get updated
+
+
+In the same way, we can install or uninstall any of the packages from the directory. Besides all these things, we also get another folder called node.modules. It is a folder containing all the modules related to our project. If by mistake this folder gets deleted, we can recover it back by again installing npm by writing npm install.
+
+If we want to install any specific version of the dependency, we can easily do that. For example, if want to install version 1.3.5 of slugify, we have to write as npm install slugify@1.3.5. As soon as write this, the version gets
+
+
+Let us now see what dev dependencies are. There are times when we want to install the packages only for development purposes, not for production purposes. In that case, dev dependencies are useful. The best example of this is nodemon. It gives us the server which automatically gets restart every time. 
+
+To install this, we have to write-
+
+npm intall nodemon --save-dev
+
+
+
+--------------------------------------------------------------------------
+
+
+# nodemon 
+
+nodemon is a package which is used auto refresh and save the changes. npm install nodemon is command to install it
+
+#Express
+
+express is a framework which is used for routing in node js
+
+
+---------------------------------------------------------------------------------------------------
+
+#Static Files & Installing Pug template engine
+
+
+Static files are the public files that we want to keep on our server so that anyone can download or use it. To server the static files, we can use the following code-
+
+// For serving static files
+app.use('/static', express.static('static'))
+
+
+suppose we make a new file as index.js and write as follows-
+
+console.log(“Harry is a good boy”);
+
+And if we restart the server and write localserver/static/index.js in the URL,
+
+
+
+
+Now if we want to serve custom static templates, then we can take the help of template engines. A template engine (template processor) is a software designed to combine templates with a data model to produce result documents. In simple words, if we feed anything to the template engine, it provides the custom template output.
+
+
+The template engine that we will use is called pug. We will install it by writing npm install pug. To start the pug engine, we have to write the following code-
+
+// Set the template engine as pug
+app.set('view engine', 'pug')
+
+
+Now we will make a new with the name views and here we will keep our .pug files. To make a file, we have to write-
+
+// Set the views directory
+app.set('views', path.join(__dirname, 'views'))
+
+
+Now we will make a demo.pug file and write the following code in it-
+
+html
+head
+title= title
+body
+h1 = message
+
+
+// Our pug demo endpoint
+app.get("/demo", (req, res)=>{ 
+    res.status(200).render('demo', { title: 'Hey Harry', message: 'Hello there and thanks for telling me how to use pubG!' })
+});
+
+
+
+----------------------------------------------------------------------------------------------------
+
+# Dance Website
+
+When we want to create website in node js
+install following in website
+
+1) $ npm init
+2)install express:-   npm install express
+3)install pug:- npm install pug
+
+
+
+
+
+

@@ -1,0 +1,465 @@
+ #Javascript
+
+We have two options to place the JavaScript in the code. One is in the <head> section and the other is after the <body> tag. But if we view other professional websites, they place their JavaScript at the end of the <body> tag so that the DOM does not get affected.
+
+#Browser console
+
+Console is the only place, where you will find all the errors made in the code. If you have locked any request or have applied AJAX in the code, the errors regarding all these things will be shown in the console tab itself. Also, we can see the values of different variables if written in the code. Although there may be a chance that if you are using any other browser apart from Chrome like Firefox or Safari, you may find a different console tab, the high-level ideas of all the browsers will be the same. Therefore, it is recommended to use the Chrome browser due to its high developer tools.
+-----------------------------------------------
+
+#variables in javascript
+
+ operators in JavaScript. There are two types of operators present in JavaScript- Binary Operators and Unary Operators. Unary Operators work only on 1 operand. For example, 3+4. On the other hand, Binary operators work only on 2 operands. For example, x= x+6. Here ‘=’ and ‘+’ are two operands.
+
+ // Operators in JavaScript
+        // Operand - entities on which operators operate
+        // In 3 + 4 '+' is the operator and 3,4 are operands
+        // 1. unary operator - It has single operand (x = -x)
+        // Examples of unary operator
+        c = -c;
+        // console.log(c);
+        // 2. binary operator - It has two operand (x = x+6)
+        // Examples of binary operator
+        c = 456+8;
+        // console.log(c);
+
+
+#String
+
+what are template literals. These are written under ` sign. If we write the code as below-
+
+var name = 'Harry';
+var channel = 'CodeWithHarry';
+var message = 'Harry is a good boy';
+var temp = `${name} is a 'nice' person "and" he has a channel called ${channel}`;
+$ symbol is used here to pick that particular string from the variable. And if we do, 
+
+console.log(temp);
+
+
+
+var str = "This is a string";
+console.log(str);
+Now let us see those functions of strings by which we can either modify, alter, slice, break, etc. the strings.
+
+Suppose we want to locate the position of any word in the string, then we can do as follows-
+// First occurrence of a substring
+var position = str.indexOf('is');
+console.log(position)
+indexOf() function is used here to locate the position of any string It gives the first occurrence of the substring. Here the position of “is” is 2, therefore the output will be as follows
+
+
+To get the position of the last substring, we can use the function lastIndexOf() as follows-
+// Last occurence of a substring
+position = str.lastIndexOf('is');
+console.log(position)
+
+
+To get a substring from a string we can use the slice() function as follows-
+var substr = str.slice(1,7);
+console.log(substr)
+
+
+However, there are other functions that help to get the substrings like-
+
+var substr = str.substring(1,7);
+var substr1 = str.substr(1,3);
+We can also replace a particular string to another string with the help of replace() function as follows-
+var replaced = str.replace('string', 'Harry');
+console.log(str)
+console.log(replaced)
+In this example, the string “This is a string” has been now been changed to “This is a Harry” and is saved to a variable replaced. The original string is still saved in the variable str.
+
+
+We can also convert the whole strong to an uppercase or lowercase letters as shown below-
+
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+
+To concat any two strings, we can take the help of concat() function as follows-
+var newString = str.concat('New String')
+console.log(newString)
+
+
+To remove all the white spaces in the string, we can use trim() function as shown below-
+var strWithWhitespaces = "   this contains        whitespaces   ";
+console.log(strWithWhitespaces)
+console.log(strWithWhitespaces.trim())
+
+
+To extract any character from a string, we can use charAt() function as follows-
+var char2 = str.charAt(2);
+console.log(char2)
+
+
+# Diffrence between var ,let and const type variables
+
+the scope of var type variable is function level
+and the scope of let type variable is block level.
+we can not change the value of const type
+
+
+Let us now understand switch-case statements. If we write as follows-
+const cups = 41; 
+    switch (cups) {
+        case 4:
+            console.log("The value of cups is 4")
+            break;
+
+        case 41:
+            console.log("The value of cups is 41")
+            break;
+
+        case 42:
+            console.log("The value of cups is 42")
+            break;
+
+        case 43:
+            console.log("The value of cups is 43")
+            break;
+    
+        default:
+            console.log("The value of cups is none of 4, 41, 42, 43")
+            break;
+    }
+
+
+
+# Arrays & Objects in JavaScript
+
+The object class represents one of JavaScript’s data types. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor. we have two types of values used in JavaScript- primitive and reference. To be more simple, either we create objects or primitive data types. The primitive data types are as follows-
+
+let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+
+Apart from primitive data types, all the other are objects. Let us now see how to define objects. If we write as follows-
+
+let employee = {
+             name: "Harry",
+             salary: 10,
+             channel: "CodeWithHarry",
+             "channel 2": "ProgrammingWithHarry",
+         }
+         console.log(employee);
+
+In this example, an employee is an object that contains the name, salary, channel, and channel 2 inside it. This is an example, where we create objects manually by us. 
+
+
+There is a special kind of object known as Arrays. The JavaScript Array class is a global object that is used in the construction of arrays; which are high level, list-like objects. An array is a special variable, which can hold more than one value at a time. 
+
+We can declare an array as follows-
+
+let names = [1, 2, 4, "Harry", undefined];
+console.log(names);
+
+---------------------------------------------------------------------------
+
+#Functions in JavaScript
+
+A JavaScript function is a block of code designed to perform a particular task. They are one of the building blocks in JavaScript.
+
+
+---------------------------------------------------------------------------
+
+Loops can execute a block of code a number of times. Loops are handy, if you want to run the same code over and over again, each time with a different value.
+
+Let us start by understanding for loops. It loops through a block of code a number of times.  If we write the code a
+
+let i = 0;
+     for(i=0; i<3;i++){
+         console.log(i);
+     }
+
+
+
+Let us now see how to use for loop to iterate an array. If we write the code as follows-
+
+let friends = ["Rohan", "Sanjeev", "Deepti", "Pooja", "SkillF"];
+     for (let index = 0; index < friends.length; index++) {
+         console.log("Hello friend, " + friends[index]);
+     }
+
+
+
+
+However, there is another simpler way to write the same loop with the help of forEach. It is written as follows-
+
+friends.forEach(function f(element){
+         console.log("Hello Friend, " + element + " to modern JavaScript");
+     });
+
+
+
+There is one more way of writing it using for/of loops. It loops through the values of an iterable object. It is written as follows-
+
+for (element of friends){
+         console.log("Hello Friend, " + element + " to modern JavaScript again");
+     }
+
+
+
+
+To iterate through an object, we can use for/in loops. Let us understand with the example below-
+
+
+let employee = {
+        name: "Harry",
+        salary: 2,
+        channel: "CWH"
+    }
+
+    // Use this loop to iterate over objects in JavaScript
+    for(key in employee){
+        console.log(`The ${key} of employee is ${employee[key]}`);
+    }
+
+
+
+Now we will see how to use while loops in JavaScript. The while loop loops through a block of code as long as a specified condition is true. The syntax is as follows-
+
+let i =0;
+    while(i<4){
+        console.log(`${i} is less than 4`);
+        i++;
+    }
+
+
+
+
+
+There is another loop known as do-while loops. It is a variant of the while loop. It will execute the code block once, before checking the condition, then it will repeat the loops as long as the condition is true. The example is as follows-
+
+let j =34;
+    do{
+        console.log(`${j} is less than 4 and we are inside do while loop`);
+        j++;
+    }while(j<4);
+
+
+----------------------------------------------------------------------------------------------------
+
+#Navigation The DOM
+
+The HTML DOM (Document Object Model) is a standard object model and programming interface for HTML. It defines:
+
+The HTML elements as objects
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements
+
+
+Let us begin with our HTML code as follows-
+
+ <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+The most common way to access an HTML element is to use the id of the element. For example, if we write as follows-
+let main = document.getElementById('main');
+console.log(main);
+By writing getElementById, we can target the HTML through its id. Therefore, the result of the above code will look like-
+
+
+
+
+Let us see another example. I want to target the elements under the id nav, we can write this as follows-
+
+let nav = document.getElementById('nav');
+console.log(nav);
+For DOM to work, keep in mind that while selecting the elements with its id, there should be a unique id for every element in the HTML code. You cannot work with two same ids for different elements otherwise it will create a problem.
+
+The easiest way to get the content of an element is by using the innerHTML property. It is useful for getting or replacing the content of HTML elements. The example is shown below-
+
+
+
+However, we can also extract the elements from HTML with the help of class name. If we want to find all the elements with same class name, use getElementsByClassName(). Let us understand this with an example. If we write as follows-
+let containers = document.getElementsByClassName('container');
+console.log(containers);
+The output of the above code will be as follows-
+
+
+
+Here, we can see two container class as have made two container classes. But if we write as container(0) or container(1) then we will get the first and second containers respectively. 
+
+ 
+
+
+If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelector()  method. For example, if we write-
+let sel = document.querySelector('container’);
+console.log("Selector returns ", sel)
+In this example, the first element which matches with the selector will be returned as follows-
+
+We can use all the selectors that we have learned till now. We can also use querySelectorAll() to target the elements. For example, if we want to select all the ids, we can write as follows-
+let sel = document.querySelectorAll('#nav');
+console.log("Selector returns ", sel)
+In the upcoming tutorials, we will see some more selectors. Till then practice these because they are the most important selectors that are mostly used.
+
+--------------------------------------------------------------------------------------------------
+
+#Events & Listening to Events
+
+
+we are going to learn how we can make browser events come into action and how should we use them. An HTML event can be something the browser does or something a user does.
+
+Here are some examples of HTML events:
+
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+Here is a list of some common HTML events-
+
+Onchange-  An HTML element has been changed
+Onclick- The user clicks an HTML element
+Onmouseover-   The user moves the mouse over an HTML element
+Onmouseout-The user moves the mouse away from an HTML element
+Onkeydown- The user pushes a keyboard key
+Onload- The browser has finished loading the page
+
+------------------------------------------------------------------------------------
+
+#setInterval & setTimeOut
+
+ we are going to learn about setInterval and setTimeOut functions and how they are useful in JavaScripts. Make a new file as tut58.html and add the instant boilerplate to get the basic HTML template. Then give the title as JavaScript SetTimeout and ClearTimeOut under the <title> tag.
+
+Now write the HTML code to get started with the work-
+
+
+--------------------------------------------------------------------
+
+#Arrow Functions In JavaScript 
+
+
+An arrow function expression is a syntactically compact alternative to a regular function expression, although without its own bindings to this, arguments, super or new.target keywords. Arrow function expressions are ill-suited as methods, and they cannot be used as constructors.
+
+Let us understand by example. If we simply write the below JavaScript
+
+function greet() {
+         console.log('Good morning');
+    }
+
+    greet();
+
+
+
+
+But if we write the same function with the help of arrow functions then our work will reduce as follows-
+
+// Arrow function
+     let greet =  ()=> {
+         console.log('Good morning');
+     }
+
+
+We can also simply add the two numbers with the arrow functions as follows-
+
+let sum2 = (a, b) => a+b;
+If we have any single variable in our code, then we don’t need to put any braces also. The example for this is as follows-
+
+let half = a => a/2;
+
+
+
+This function will return half the value of a.
+
+Now let us see the use of lexical this with the help of an example. If we make the object obj1 and an array of names and then make a function as speak which does the following task as follows-
+
+let obj1={
+        names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log("Kukdoo Koo " + student);
+            });
+        }
+    }
+    obj1.speak();
+
+
+
+In the above example, we have made a speak function, add a forEach() loop to it, and then added an arrow function. But if we add a variable greeting and add this.greeting inside the console.log as follows-
+
+let obj1={
+        greeting: "Good Morning",
+        names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log(this.greeting + " Kukdoo Koo " + student);
+            });
+        }
+    }
+    obj1.speak();
+This variable is normally used to point the variable inside the function. But in the case of arrow functions, it points the variable outside the function. This is known as lexical this.
+
+--------------------------------------------------------------------------------------
+
+
+# Math Object In JavaScript
+
+let m = Math;
+    console.log(m)
+
+// Printing the constants from Math Object
+    console.log("The value of Math.E is ", Math.E)
+    console.log("The value of Math.PI is ", Math.PI)
+    console.log("The value of Math.LN2 is ", Math.LN2)
+    console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2)
+    console.log("The value of Math.LOG2E is ", Math.LOG2E)
+
+
+---------------------------------------------------------------------
+
+
+#JSON in JavaScript
+
+
+What is JSON?
+
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is language independent
+JSON is "self-describing" and easy to understand
+The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. The code for reading and generating JSON data can be written in any programming language.
+
+Make a new file as tut62.html and add an instant boilerplate to get the basic HTML template as usual. Then give the title as JSON Tutorial under the <title> tag. Now let us initialize the JSON object and see what the output comes in the console?
+
+
+Now if we want to transport these properties using JSON, the question arises, we can do it normally one by one; why there is need for JSON? In some cases, we will have nested objects. Then, in that case, it is difficult to transport each property of the object and convert it into a string to parse them. In such cases, we take the help of JSON.
+
+Let us now see, how to stringify the above object. If we write as follows-
+
+let myJsonStr = JSON.stringify(jsonObj);
+console.log(myJsonStr);
+
+
+The stringify function is used to convert a valid JavaScript object into a string.
+
+Once, this object is converted into a string, we can apply all the string functions to it. For example, if we want to replace Harry with Larry, then we can write as follows-
+
+myJsonStr = myJsonStr.replace('Harry', 'Larry');
+console.log(myJsonStr)
+
+
+Now to convert this string again into an object, we can write as follows-
+
+newJsonObj = JSON.parse(myJsonStr);
+console.log(newJsonObj
+
+
+
+---------------------------------------------

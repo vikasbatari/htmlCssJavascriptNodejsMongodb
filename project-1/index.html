@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Harry fitness</title>
+    <style>
+      body {
+        font-family: "Gideon Roman", cursive;
+        margin: 0px;
+        padding: 0px;
+        background: url("img/bg.jpg");
+      }
+      .left {
+        /* border: 2px solid red; */
+        position: absolute;
+        display: inline-block;
+        left: 32px;
+        top: -6px;
+      }
+
+      .left img {
+        width: 113px;
+        margin-bottom: -22px;
+      }
+      .left div {
+        text-align: center;
+        margin: 0px;
+      }
+      .mid {
+        /* border: 2px solid green; */
+        display: block;
+        width: 37%;
+        margin: 20px auto;
+      }
+      .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        right: 32px;
+        top: 35px;
+      }
+      .navbar {
+        display: inline-block;
+      }
+
+      .navbar li {
+        display: inline-block;
+
+        text-decoration: none;
+      }
+      .navbar li a {
+        text-decoration: none;
+        padding: 34px 15px;
+        color: black;
+        font-size: 18px;
+      }
+      .navbar li a:hover {
+        text-decoration: underline;
+      }
+      .btn {
+        font-family: "Gideon Roman", cursive;
+        border: 2px solid grey;
+        padding: 4px 6px;
+        margin: 4px 7px;
+        color: black;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #cfb2b2;
+        font-size: 15px;
+      }
+
+      .btn:hover {
+        color: red;
+        text-decoration: underline;
+      }
+      .container {
+        border: 2px solid #564f4f;
+        margin: 136px 85px;
+        padding: 11px 19px;
+        width: 33%;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+       
+      }
+      .form-group{
+          margin: 23px 2px;
+      }
+      .form-group input {
+        border: 2px solid grey;
+        margin: 8px 2px;
+        padding: 5px 11px;
+        width: 250px;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+      }
+      .container button{
+          display: block;
+          width: 45%;
+          margin: auto;
+      }
+      .container h1{
+         text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <img src="img/gym.jpg" alt="" />
+        <div>Harry fitness</div>
+      </div>
+      <div class="mid">
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Fitnes calculator</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <button class="btn">Call us</button>
+        <button class="btn">Email us</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Join the best gym</h1>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Name" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Email" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Contact number" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Location" />
+      </div>
+
+      <button class="btn" title="Submit">Submit</button>
+    </div>
+  </body>
+</html>

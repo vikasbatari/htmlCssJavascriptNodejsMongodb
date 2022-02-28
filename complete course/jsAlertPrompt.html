@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, prompt and confirm</title>
+</head>
+<body>
+ 
+    <script>
+        // alert("this is a message");
+
+        // var prop= prompt("what is your name","guest")
+        // console.log(prop);
+
+        let conf= confirm("Do you really want to delete this post ?")
+        console.log(conf);
+
+        if(conf)
+        {
+            console.log("Record has been deleted successfully");
+        }else{
+            console.log("Record has been canceled");
+        }
+    </script>
+</body>
+</html>

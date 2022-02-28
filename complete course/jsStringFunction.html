@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String functions</title>
+  </head>
+  <body>
+    <script>
+      var str = "this is my string";
+      var position = str.indexOf("is");
+      console.log(position);
+
+      position= str.lastIndexOf("is");
+      console.log(position);
+
+      position= str.slice(2,6);
+      console.log(position);
+
+      position= str.substring(2,8);
+      console.log(position);
+
+      position = str.substr(2,8)
+      console.log(position);
+
+      position= str.replace("string", "style");
+
+      console.log(position);
+
+      var newstring= "    this is new       strings              ";
+
+      console.log(newstring.trim());
+
+      console.log(newstring.toUpperCase());
+      console.log(newstring.toLowerCase());
+      console.log(newstring.charAt(2));
+      console.log(newstring.charCodeAt(8));
+
+      console.log(newstring[4]);
+
+
+
+    </script>
+  </body>
+</html>
